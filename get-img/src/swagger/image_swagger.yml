@@ -1,0 +1,44 @@
+swagger: '2.0'
+info:
+  title: Image Service API
+  description: API para el manejo de imágenes.
+  version: 1.0.0
+paths:
+  /api/images:
+    get:
+      tags:
+        - Images
+      summary: Obtiene una lista de imágenes.
+      responses:
+        200:
+          description: Una lista de imágenes.
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: imagen1.jpg
+                url:
+                  type: string
+                  example: http://localhost:3012/api/images/1.jpg
+  /api/images/{image_name}:
+    get:
+      tags:
+        - Images
+      summary: Recupera y redimensiona una imagen.
+      parameters:
+        - name: image_name
+          in: path
+          required: true
+          type: string
+          description: Nombre de la imagen a recuperar.
+      responses:
+        200:
+          description: La imagen redimensionada.
+          schema:
+            type: string
+            format: binary
+        404:
+          description: Imagen no encontrada.
