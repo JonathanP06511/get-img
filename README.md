@@ -7,7 +7,7 @@ This repository uses GitHub Actions to build and deploy Docker images to Docker 
 The workflow consists of two main jobs:
 
 1. **build-and-push**: Builds and pushes Docker images to Docker Hub.
-2. **deploy-get-video**: Deploys the Docker image to Azure Web App.
+2. **deploy-get-img**: Deploys the Docker image to Azure Web App.
 
 ### build-and-push
 
@@ -22,7 +22,7 @@ This job performs the following actions:
 5. **Fix routes in `docker-compose.yml`**: Adjusts paths in the `docker-compose.yml` file for correct configuration.
 6. **Execute Docker Compose**: Brings up the containers defined in the `docker-compose.yml` file.
 
-### deploy-get-video
+### deploy-get-img
 
 This job performs the following actions:
 
