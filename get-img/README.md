@@ -13,7 +13,7 @@ This project is an Image Service API built with Flask. It provides endpoints for
 
 1. Clone this repository to your local machine:
     ```bash
-    git clone <repository URL>
+    git clone https://github.com/JonathanP06511/get-img.git
     ```
 
 2. Navigate to the project directory:
